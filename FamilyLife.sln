@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FamilyLife", "FamilyLife\FamilyLife.csproj", "{89F4D059-685A-4D2C-B0A1-F45AFD1167F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Model", "StarWars.Model\StarWars.Model.csproj", "{2D7FABAE-756A-4FBC-8D22-6DACA9907329}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89F4D059-685A-4D2C-B0A1-F45AFD1167F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F4D059-685A-4D2C-B0A1-F45AFD1167F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F4D059-685A-4D2C-B0A1-F45AFD1167F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F4D059-685A-4D2C-B0A1-F45AFD1167F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D7FABAE-756A-4FBC-8D22-6DACA9907329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D7FABAE-756A-4FBC-8D22-6DACA9907329}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D7FABAE-756A-4FBC-8D22-6DACA9907329}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D7FABAE-756A-4FBC-8D22-6DACA9907329}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
