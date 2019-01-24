@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace StarWars.Model
 {
     [DataContract(Name = "vehicles")]
-    public class Vehicle
+    public class Vehicle : ModelItem
     {
         [DataMember(Name = "name")]
         public string Name { get; set; }

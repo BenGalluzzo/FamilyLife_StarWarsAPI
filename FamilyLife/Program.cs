@@ -17,18 +17,23 @@ namespace FamilyLife
         static void Main(string[] args)
         {
             var people = GetPeople().Result;
-            
             foreach (var person in people)
             {
                 Console.WriteLine(person.Name);
+                foreach (string film in person.Films)
+                {
+                    Console.WriteLine(" - " + GetFilm(film).Result.Title);
+                }
+                Console.WriteLine();
+
             }
         }
 
-            private static async Task<List<Person>> GetPeople()
-            {
-                List<Person> people = new List<Person>();
-                int pageNumber = 1;
-                int recordCount = 0;
+        private static async Task<List<Person>> GetPeople()
+        {
+            List<Person> people = new List<Person>();
+            int pageNumber = 1;
+            int recordCount = 0;
 
             do
             {
@@ -49,8 +54,23 @@ namespace FamilyLife
             } while (recordCount - 10 * pageNumber++ > 0);
 
             return people;
-            }
-
-                }
-
         }
+
+        private static async Task<Film> GetFilm(string _apiURI)
+        {
+            var serializer = new DataContractJsonSerializer(typeof(Film));
+
+            client.DefaultRequestHeaders.Accept.Clear();
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Add("User-Agent", "FamilyLife Star Wars reader.");
+
+            var streamTask = client.GetStreamAsync(_apiURI);
+            var film = serializer.ReadObject(await streamTask) as Film;
+
+            return film;
+        }
+
+    }
+
+}
